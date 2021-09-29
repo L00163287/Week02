@@ -10,19 +10,14 @@
 #
 """
 
-book1 = "Sherlock Holmes 1"
-book2 = "Sherlock holmes 2"
-book3 = "Learn Java"
-book4 = "Learn python"
-book5 = "Tale of two cities"
+Total = 0.0  # Define total at 0
 
-book1val = 10.50
-book2val = 11.50
-book3val = 22.50
-book4val = 20.50
-book5val = 10
+print("Book Name \t Book Price \t Running Total")
+print("-"*43)
+for i in range(1, 6, 1):  # Iterate loop 5 times
+    bookName = str(input("Enter Book Name: "))  # get book Name
+    bookValue = float(input("Enter Book price: "))  # get book Price
+    Total = Total + bookValue  # Calculate running total by adding previous total and new book value
+    print(bookName + "\t" + str(bookValue) + "\t" + str(Total))  # print total
 
-Total = 0.0
 
-for i in range(1, 6, 1):
-    print(str(book1) + "\t" + str(book1val) + "\t" + str(Total + book1val))
